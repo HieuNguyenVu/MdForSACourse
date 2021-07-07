@@ -184,14 +184,60 @@ The Azure Data Store or Azure Storage product that is designed for each specific
     Azure Analysis Services.
     => **Keep in mind that for the exam you may need to know the purpose each of the products plays within a data analytics context.** The internals of how they work, how to build data warehouse structures, and how to query them are not part of the exam.
 
-    1. Azure Synapse Analytics
-    2. Azure Data Factory (ADF)
-    3. Azure Data Lake Store (ADLS)
-    4. Azure Data Bricks
-    5. Azure Data Lake
-    6. Azure Analysis Services
-    7. Azure Data Explorer (ADX) and Azure Storage Explorer
+    **1. Azure Synapse Analytics**
+        ![FIGURE 5.8 A traditional nonrelational data flow diagram and Big Data pipeline](./img/image2.png)
+      - Data will not store in the INGESTION endpoint, because that could be too latent. instead, these endpoints get the data queued up and perhaps cleansed in preparation for storage and analysis.
 
+      - Once the data is ingested into the Big Data pipeline, it then gets stored into any number of systems such as Data Lake Storage, an Azure Cosmos DB, or an Azure Database for MySQL.
+
+      - An Azure product called Azure Data Bricks helps with the exploration of the data so that learnings can be found and once found stored in a Data Lake for additional analysis and presentation
+
+        ![TABLE 5.1 Differences Between Data Lake and Data Warehouse](./img/image3.png)
+
+    => **Azure Synapse Analytics** (formally Azure SQL Data Warehouse) is a product that provides the capability to manage both data warehouse and data lake datasets.
+
+    **2. Azure Data Factory (ADF)**
+      - The nonrelational data model and the big data pipeline are focused on the ingestion of huge amounts of data from many sources in many different endpoints.
+
+      - Some of those endpoints that an ingestion service. May receive data from can come via social media companies such as Twitter or Facebook. or from some AZ service, Event Hub, Event Grid...
+
+      - ADF have two main part. Connection and Trigger.
+      - ADF is intended to manage relational data structures.
+      - HD Insight is more targeted toward nonrelational, NoSQL, and open source solutions.
+
+    **=> The Azure Data Factory (ADF) is the connector between the data generators and the data storage.**
+
+    **3. Azure Data Lake Store (ADLS)**
+      - Azure Data Lake Storage (ADLS) is built on top of Azure Blob Storage.
+      - ADLS is optimized for storing a large amount of data in any format for analytical and reporting purposes.
+      - ADLS supports the nonrelational data model concept of semi- and unstructured storage.
+
+    **4. Azure Data Bricks**
+      - Azure Data Bricks provides an interface to the data that helps you get an answer to questions that you think can be found in the data.
+      - Use AI to gather some insights into the intention of a data element instead of attempting to convert its meaning.
+
+    **5. Azure Data Lake**
+      - After Azure Data Bricks has been prepared and the search learning outcomes documented.
+      The data is stored in either Azure Data Lake or Azure Data Warehouse for final analysis, conclusion making, and presentation.
+      - Azure Data Lake, large of data (petabyte), unstructure. Expected to change at a relatively quick pace, scale a large part. Data store can be any form, video, blob, documents, semistructured.
+      - EDW is quite a bit smaller and much more structured, making it simpler to analyze and serve
+
+    **6. Azure Analysis Services**
+      - This product is an Azure PaaS offering that restructures or interprets data, into a semantic data model (SDM).
+      - Don't care data is relation or not.
+
+    **7. Azure Data Explorer (ADX) and Azure Storage Explorer**
+      - Once data has been placed into a data store, whether it’s structured or not, Azure Data Explorer (ADX) help browse and analyze it.
+      - Azure Storage Explorer, onthe other hand, provides an interface for traversing numerous Azure Storage products such as containers, shares, queues, and tables
+
+8. Shared Files
+      => Azure Files.
+
+### Azure Data Store
+    - Author compare about Azure Data Store and Azure storage.
+    - Data partitioning, Horizontal, Vertical, Function.
+    - A dataset is a relational database concept. Related to a table or multiple table.
+    - Azure Database Migration Service (DMS), migration from one or more on-premise data stores to an Azure data platform product.
 
 ***
 aspect: [N] view point or edge side
@@ -204,7 +250,7 @@ traditional: long time ago, "Tet holiday is traditional event."
 These day : nowaday
 
 In contrast: nguoc lai,
-
+getting into: indept
 manipulated: do action
  intended: focus on, purpose on
 ***
